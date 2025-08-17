@@ -89,24 +89,5 @@ toggle.addEventListener('change', () => {
   }
 });
 
-/// Saat halaman dimuat, tampilkan domisili yang tersimpan
-document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('domisili');
-  if (saved) {
-    document.getElementById('domisili-text').textContent = saved;
-  }
-});
 
-function ubahDomisili() {
-  const lokasi = prompt("Masukkan kota domisili kamu:");
-  if (lokasi && lokasi.trim() !== "") {
-    localStorage.setItem('domisili', lokasi.trim());
-    document.getElementById('domisili-text').textContent = lokasi.trim();
-    // Tambahan animasi (opsional)
-    document.getElementById('domisili-text').style.opacity = 0;
-    setTimeout(() => {
-      document.getElementById('domisili-text').style.opacity = 1;
-    }, 200);
-  }
-}
 
