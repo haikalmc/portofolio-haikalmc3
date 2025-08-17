@@ -142,6 +142,47 @@ function ambilTestimoni() {
 // panggil saat halaman load
 window.onload = ambilTestimoni;
 
+// Kirim testimoni ke Firebase
+function kirimTestimoni() {
+  const nama = document.getElementById("namaInput").value || "Anonim";
+  const pesan = document.getElementById("pesanInput").value;
+
+  if (!pesan.trim()) {
+    alert("Pesan tidak boleh kosong!");
+    return;
+  }
+
+  const data = {
+    nama: nama,
+    pesan: pesan,
+    waktu: new Date().toLocaleString()
+  };
+
+  db.ref("testimoni").push(data)
+    .then(() => {
+      document.getElementById("pesanInput").value = "";
+      alert("Testimoni terkirim!");
+    })
+    .catch(err => console.error("Gagal:", err));
+}
+
+// Ambil & tampilkan testimoni
+function ambilTestimoni() {
+  const list = document.getElementById("listTestimoni");
+  db.ref("testimoni").on("value", (snapshot) => {
+    list.innerHTML = ""; // reset list
+
+    snapshot.forEach((child) => {
+      const data = child.val();
+      const el = document.createElement("p");
+      el.innerHTML = `<b>${data.nama}</b>: ${data.pesan}<br><small>${data.waktu}</small>`;
+      list.appendChild(el);
+    });
+  });
+}
+
+// Jalankan ambilTestimoni saat halaman dibuka
+ambilTestimoni();
 
 
 
