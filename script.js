@@ -1,3 +1,40 @@
+// --- Firebase Config ---
+const firebaseConfig = {
+  apiKey: "AIzaSyDuGMOOMeSB5d_gCI9ucYodaXBaPQ2kgdw",
+  authDomain: "portofolio-haikalmc3.firebaseapp.com",
+  databaseURL: "https://portofolio-haikalmc3-default-rtdb.firebaseio.com", // penting buat Realtime DB
+  projectId: "portofolio-haikalmc3",
+  storageBucket: "portofolio-haikalmc3.firebasestorage.app",
+  messagingSenderId: "889359136238",
+  appId: "1:889359136238:web:7b417fd0299e60bbdb0aff",
+  measurementId: "G-TKMJXMRK7D"
+};
+
+// --- Inisialisasi Firebase ---
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// --- Fungsi kirim testimoni ---
+function kirimTestimoni() {
+  const data = {
+    nama: "Pengunjung",
+    pesan: "Website keren banget! 😍",
+    waktu: new Date().toLocaleString()
+  };
+
+  db.ref("testimoni").push(data)
+    .then(() => {
+      alert("Testimoni terkirim!");
+    })
+    .catch(err => {
+      console.error("Gagal:", err);
+      alert("Gagal mengirim testimoni!");
+    });
+}
+
+
+
+
 // Script bisa dikembangkan, misalnya interaksi tombol, animasi, dll.
 console.log("Website portofolio berhasil dimuat!");
 
@@ -88,6 +125,7 @@ toggle.addEventListener('change', () => {
     localStorage.setItem('isOnline', 'false');
   }
 });
+
 
 
 
