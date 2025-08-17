@@ -1,0 +1,306 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+}
+
+header {
+  background: #007acc;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.sosial a {
+  color: #007acc;
+  margin: 0 10px;
+  font-size: 24px;
+}
+.sosial a:hover {
+  color: #005b99;
+}
+
+.sosial a {
+  color: #007acc;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.sosial a:hover {
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .btn {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode a {
+  color: #4aa3ff;
+}
+
+#timeline {
+  padding: 2rem;
+  background: #ffffff;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline {
+  list-style: none;
+  border-left: 3px solid #007acc;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 10px;
+  line-height: 1.6;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #007acc;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #007acc;
+}
+
+.dark-mode #timeline {
+  background: #1e1e1e; /* ganti jadi gelap */
+  color: #f0f0f0;      /* teksnya jadi terang */
+}
+
+.dark-mode .timeline li::before {
+  background: #4aa3ff;
+  box-shadow: 0 0 0 2px #4aa3ff;
+}
+
+.game-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.game-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.game-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode .game-buttons button {
+  background-color: #66b2ff;
+  color: #000;
+}
+
+.dark-mode .game-buttons button:hover {
+  background-color: #3399ff;
+}
+
+.kontak-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.kontak-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.kontak-section p {
+  font-size: 18px;
+  color: #333;
+}
+
+.dark-mode .kontak-section p {
+  color: #eee;
+}
+
+.show-wa {
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* 🔥 Animasi fade */
+.fade {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.testimoni {
+  background: var(--bg-secondary);
+  padding: 2em;
+  border-radius: 1em;
+  margin: 2em;
+}
+
+.testimoni h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.testimoni .quote {
+  font-style: italic;
+  margin: 1em 0;
+  background: var(--bg);
+  padding: 1em;
+  border-left: 4px solid #00bfa6;
+  border-radius: 0.5em;
+}
+
+.testimoni form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.testimoni input,
+.testimoni textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+
+.testimoni .btn {
+  background: #00bfa6;
+  color: white;
+  padding: 0.6em 1em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.testimoni .btn:hover {
+  background: #009e8c;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+#onlineStatus {
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.domisili-card {
+  background-color: var(--card-bg, #fff);
+  color: var(--text-color, #000);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.domisili-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.domisili-card button:hover {
+  background-color: #45a049;
+}
+.dark-mode.domisili-card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .domisili-card button {
+  background-color: #388e3c;
+  color: white;
+}
+
+.dark-mode .domisili-card button:hover {
+  background-color: #2e7d32;
+}

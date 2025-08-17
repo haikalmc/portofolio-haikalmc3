@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <h1>Halo, saya Haikal</h1>
+    <p>Web Developer | Desainer | Freelancer</p>
+    <button onclick="toggleDarkMode()" class="btn">🌓 Mode Gelap</button>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah pengembang web dan game sederhana yang berfokus pada pembuatan website cepat dan responsif.</p>
+  </section>
+
+<section id="timeline">
+  <h2>🕓 Perjalanan Karier</h2>
+  <ul class="timeline">
+    <li><strong>mei 2025</strong> – Mulai belajar HTML & CSS secara otodidak.</li>
+    <li><strong>juni 2025</strong> – Membuat proyek Tetris & Ular Tangga dengan JavaScript.</li>
+    <li><strong>juni 2025</strong> – Belajar Firebase, membuat game online multiplayer.</li>
+    <li><strong>juli 2025</strong> – Membangun portofolio dan siap menerima proyek freelance!</li>
+  </ul>
+</section>
+
+<!-- Tombol Toggle -->
+<label class="switch">
+  <input type="checkbox" id="onlineToggle">
+  <span class="slider"></span>
+</label>
+<span id="onlineStatus">🔴 Lagi offline... jangan ganggu 😴</span>
+
+<section class="game-section">
+  <h2>🎮 Mainkan Game Buatanku</h2>
+  <div class="game-buttons">
+    <button onclick="window.open('https://haikalmc.github.io/Tetris-game/', '_blank')">🧱 Tetris Online</button>
+    <button onclick="window.open('https://haikalmc.github.io/Ulartanggal-online/', '_blank')">🐍 Ular Tangga Online</button>
+  </div>
+</section>
+
+  <section id="portofolio">
+    <h2>Proyek</h2>
+    <ul>
+      <li>Website  - HTML/CSS/JS</li>
+      <li>game - HTML/CSS/JS</li>
+    </ul>
+  </section>
+
+   <section class="kontak-section">
+ <section class="kontak-section">
+  <h2>📬 Kontak</h2>
+  <p>
+    WhatsApp: 
+    <span id="wa-number" class="fade">08********</span>
+    <img id="eye-icon"
+         src="https://img.icons8.com/ios-glyphs/30/000000/visible--v1.png"
+         alt="Lihat" class="show-wa"
+         onclick="toggleNumber()" />
+  </p>
+  <a href="https://wa.me/+6285767634002" target="_blank">
+  <button>💬 Chat Saya di WhatsApp</button>
+</a>
+</section>
+
+<section class="statistik">
+  <h2>📈 Statistik</h2>
+  <p>Website ini telah dikunjungi <span id="counter">0</span> kali dari perangkat ini.</p>
+</section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Email: haikalray28@gmail.com</p>
+    <div class="sosial">
+  <a href="https://github.com/haikalmc" target="_blank"><i class="fab fa-github"></i></a>
+   <a href="https://www.tiktok.com/@haikalmc3" target="_blank" title="TikTok">
+    <i class="fab fa-tiktok"></i></a>
+
+    <div id="domisili-container" class="domisili-card">
+  <p>📍 Domisili: <span id="domisili-text">[belum diatur]</span></p>
+  <button onclick="ubahDomisili()">✏️ Ganti Domisili</button>
+</div>
+
+
+    <section class="testimoni">
+  <h2>🗣️ Kata Mereka</h2>
+  <div class="quote">"Game-nya keren banget, bikin nagih!" <br>— Asep</div>
+  <div class="quote">"Profil ini clean dan menarik, suka!" <br>— rizz</div>
+ 
+  <button onclick="toggleForm()" class="btn">➕ Kirim Testimoni</button>
+
+  <form id="testimoniForm" style="display:none; margin-top:1em;">
+    <input type="text" id="nama" placeholder="Nama kamu" required><br>
+    <textarea id="pesan" placeholder="Tulis testimonimu..." required></textarea><br>
+    <button type="submit" class="btn">Kirim</button>
+  </form>
+
+  <div id="testimoniBaru"></div>
+</section>
+
+</div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 haikal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
