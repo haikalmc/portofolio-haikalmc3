@@ -126,6 +126,22 @@ toggle.addEventListener('change', () => {
   }
 });
 
+function ambilTestimoni() {
+  db.ref("testimoni").on("value", snapshot => {
+    const container = document.getElementById("listTestimoni");
+    container.innerHTML = "";
+    snapshot.forEach(child => {
+      const item = child.val();
+      const div = document.createElement("div");
+      div.innerHTML = `<p><b>${item.nama}</b>: ${item.pesan} <br><small>${item.waktu}</small></p>`;
+      container.appendChild(div);
+    });
+  });
+}
+
+// panggil saat halaman load
+window.onload = ambilTestimoni;
+
 
 
 
